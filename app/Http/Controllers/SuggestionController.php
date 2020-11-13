@@ -15,8 +15,10 @@ class SuggestionController extends Controller
     public function index()
     {
         $suggestions = Suggestion::get();
-        return $suggestions;
-    }
+       // dd($suggestions->toArray());
+       // return $suggestions;
+       return view('suggestions.index', compact('suggestions'));
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +27,7 @@ class SuggestionController extends Controller
      */
     public function create()
     {
-        
+        return view('suggestions.create');
     }
 
     /**
@@ -36,7 +38,7 @@ class SuggestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('hola');
     }
 
     /**
